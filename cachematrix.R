@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## cachematrix file is to cache the inverse of a matrix
+## It stores functions:
+##  makeCacheMatrix() and cacheSolve()
 
-## Write a short comment describing this function
+## makeCacheMatrix(): creates a special "matrix" object that can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
   
@@ -20,9 +21,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
-cacheSolve <- function(x=maxtrix(), ...) {
+## cacheSolve(): computes the inverse of the special "matrix" returned by makeCacheMatrix above
+## If the inverse has already been calculated (and the matrix has not changed), then cacheSolve should retrieve the inverse from the cache.
+cacheSolve <- function(x = maxtrix(), ...) {
         ## Return a matrix that is the inverse of 'x'
   m <- x$getsolve()
   if(!is.null(m)) {
